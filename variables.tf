@@ -48,12 +48,7 @@ variable "wireguard_port" {
   default = 443
 }
 
-variable "wireguard_server_cidr" {
-  type    = string
-  default = "172.16.0.0/24"
-}
-
 variable "wireguard_server_private_ip" {
   type    = string
-  default = "172.16.0.1/24"
+  default = "172.16.0.1/24, fd77:77:7::1/64"
 }

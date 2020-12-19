@@ -27,7 +27,6 @@ data "template_file" "user_data" {
   template = file("${path.module}/templates/user-data.sh")
   vars = {
     wireguard_port              = var.wireguard_port
-    wireguard_server_cidr       = var.wireguard_server_cidr
     wireguard_server_private_ip = var.wireguard_server_private_ip
   }
 }
