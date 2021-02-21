@@ -2,6 +2,16 @@ variable "ami_id" {
   type = string
 }
 
+variable "http_endpoint" {
+  description = "enable or disable metadata service"
+  default     = "enabled"
+}
+
+variable "http_tokens" {
+  description = "requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2)"
+  default     = "required"
+}
+
 variable "instance_type" {
   type    = string
   default = "t3a.micro"
